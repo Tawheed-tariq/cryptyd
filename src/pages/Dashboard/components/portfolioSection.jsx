@@ -35,7 +35,13 @@ export default function PortfolioSection(){
                         <Text >Total Portfolio Value</Text>
                         <Icon as={FaInfoCircle} />
                     </HStack>
-                    <Text textStyle={'h2'} fontWeight={'medium'}>₹ 112,312.24</Text>
+                    <Text 
+                        textStyle={{
+                            base:'h5',
+                            sm:'h4',
+                            md: 'h3'
+                        }} 
+                        fontWeight={'medium'}>₹ 112,312.24</Text>
                 </Stack>
                 <Stack>
                     <Text fontSize={'sm'} color={'black.80'}>Wallet Balances</Text>
@@ -54,14 +60,27 @@ export default function PortfolioSection(){
                         }}
                     >
                         <HStack> 
-                            <Text textStyle={'h2'} fontWeight={'medium'}>22.39401000</Text>
-                            <Tag color={'black.60'}>BTC</Tag>
+                            <Text 
+                                textStyle={{
+                                    base:'h5',
+                                    sm:'h4',
+                                    md: 'h3'
+                                }} 
+                                fontWeight={'medium'}>22.39401000</Text>
+                            <Tag size={'sm'} color={'black.60'}>BTC</Tag>
                             {/* <Text px={'6px'} py={'4px'} fontSize={'12px'} bg={'black.5'} color={'black.60'} borderRadius={'full'}>BTC</Text> */}
                         </HStack>
                         <HStack> 
-                            <Text textStyle={'h2'} fontWeight={'medium'}>₹ 1,300.00</Text>
-                            <Tag color={'black.60'}>INR</Tag>
-                            {/* <Text px={'6px'} py={'4px'} fontSize={'12px'} bg={'black.5'} color={'black.60'} borderRadius={'full'}>BTC</Text> */}
+                            <Text 
+                                textStyle={{
+                                    base:'h5',
+                                    sm:'h4',
+                                    md: 'h3'
+                                }}
+                                fontWeight={'medium'}>₹ 1,300.00</Text>
+                            <Tag 
+                                size={'sm'}
+                                color={'black.60'}>INR</Tag>
                         </HStack>
                     </HStack>
                 </Stack>
@@ -80,8 +99,19 @@ export default function PortfolioSection(){
                     sm: "row",
                 }} 
             >
-                <Button leftIcon={<Icon as={MdOutlineFileDownload}/>} >Deposit</Button>
-                <Button leftIcon={<Icon as={LuArrowUpFromLine}/>}>Withdrawal</Button>
+                <Button size={{
+                    base: 'sm',
+                    md: 'md'
+                }} leftIcon={<Icon as={MdOutlineFileDownload}/>} >Deposit</Button>
+                <Button
+                    size={{
+                        base: 'sm',
+                        md: 'md'
+                    }}
+                    leftIcon={<Icon as={LuArrowUpFromLine}/>}
+                 >
+                    Withdrawal
+                </Button>
             </HStack>
         </HStack>
     )
