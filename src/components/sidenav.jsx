@@ -2,8 +2,12 @@ import {Box, HStack, Heading, Icon, Stack, Text } from "@chakra-ui/react";
 import {RxDashboard} from 'react-icons/rx'
 import {TbArrowsDownUp} from 'react-icons/tb'
 import {MdSupportAgent} from 'react-icons/md'
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 export default function Sidenav(){
+    const location = useLocation()
+    const isActiveLink = (link) => {
+        return location.pathname === link
+    }
     const navLinks = [
         {
           icon: RxDashboard,
@@ -33,7 +37,8 @@ export default function Sidenav(){
                                     bg:"#F3F3F7",
                                     color: "#171717"
                                 }}
-                                color={'#797E82'}
+                                bg={isActiveLink(nav.link) ? "#F3F3F7" : "transparent"}
+                                color={ isActiveLink(nav.link) ? "#171717" :'#797E82'}
                                 >
                                     <Icon as={nav.icon}/>
                                     <Text fontSize={'14px'} fontWeight={'medium'}>{nav.text}</Text>
@@ -54,7 +59,8 @@ export default function Sidenav(){
                             bg:"#F3F3F7",
                             color: "#171717"
                         }}
-                        color={'#797E82'}
+                        bg={isActiveLink('/support') ? "#F3F3F7" : "transparent"}
+                        color={ isActiveLink('/support') ? "#171717" :'#797E82'}
                         >
                             <Icon as={MdSupportAgent}/>
                             <Text fontSize={'14px'} fontWeight={'medium'}>Support</Text>
