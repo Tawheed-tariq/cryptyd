@@ -9,12 +9,8 @@ export default function Dashboard(){
     return(
         <DashboardLayout title={'Dashboard'}>
             <Grid 
-            px={{
-                base: '0',
-                sm: '6',
-                md: '9'
-            }}
-            mb={'12'}
+            mb={'10'}
+            
             gridTemplateColumns={{
                 base: `repeat(1, 1fr)`,
                 xl: `repeat(2, 1fr)`
