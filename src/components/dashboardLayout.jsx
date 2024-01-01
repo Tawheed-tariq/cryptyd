@@ -20,7 +20,7 @@ export default function DashboardLayout({title, children}){
                 <SideDrawer isOpen={isOpen} onClose={onClose}/>
                 <Box flexGrow={'1'}>
                     <Topnav title={title} onOpen={onOpen}/>
-                    <Container mt={'6'} maxW={'70rem'} px={'4'}>
+                    <Container overflowX={'hidden'} overflowY={'auto'} h={'calc(100vh - 64px)'} mt={'6'} maxW={'70rem'} px={'4'}>
                         {children}
                     </Container>
                 </Box>

@@ -8,11 +8,31 @@ export default function PriceSection(){
     const timeStamps = ["7:15 PM", "12:55 AM", "6:35 AM", "12:15 PM", "5:55 PM"]
     return(
         <CustomCard h={'full'}>
-            <Flex justify={'space-between'} align={'start'}>
+            <Flex 
+                flexDir={{
+                    base: 'column',
+                    md: 'row'
+                }} 
+                justify={'space-between'} 
+                align={'start'}
+                gap={{
+                    base: '4',
+                    md: '0'
+                }}
+                >
                 <Stack>
                     <Text fontSize={'sm'} color={'black.80'} >Current Price</Text>
                     <HStack>
-                        <Text textStyle={'h2'} fontWeight={'medium'}>₹26,670.25</Text>
+                        <Text 
+                            textStyle={{
+                                base: 'h4',
+                                md:'h3',
+                                lg: 'h2'
+                            }} 
+                            fontWeight={'medium'}
+                            >
+                                ₹26,670.25
+                            </Text>
                         <HStack fontWeight={'medium'} fontSize={'sm'} gap={'1'} color={'#059669'}>
                             <Icon as={MdArrowOutward} />
                             <Text>0.04%</Text>
@@ -20,11 +40,21 @@ export default function PriceSection(){
                     </HStack>
                 </Stack>
                 <HStack>
-                    <Button leftIcon={<Icon as={BiPlusCircle}/>} >Buy</Button>
-                    <Button leftIcon={<Icon as={BiMinusCircle}/>}>Sell</Button>
+                    <Button 
+                        size={{
+                            base: 'sm',
+                            md: 'md'
+                        }} 
+                        leftIcon={<Icon as={BiPlusCircle}/>} >Buy</Button>
+                    <Button 
+                        size={{
+                            base: 'sm',
+                            md: 'md'
+                        }}
+                        leftIcon={<Icon as={BiMinusCircle}/>}>Sell</Button>
                 </HStack>
             </Flex>
-            <Tabs variant='soft-rounded'>
+            <Tabs mt={'3'} variant='soft-rounded'>
                 <Flex justify={'end'}>
                     <TabList borderRadius={'lg'} bg={'black.10'} gap={4} p={'3px'}>
                         {
@@ -45,6 +75,7 @@ export default function PriceSection(){
                 <TabPanels>
                     <TabPanel>
                         <Image
+                            w={'100%'}
                             mt={'3rem'}
                             src="images/Graph.svg"
                         />
