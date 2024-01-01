@@ -2,12 +2,11 @@ import { Box, Container, Flex, useDisclosure } from "@chakra-ui/react";
 import Sidenav from "./sidenav";
 import Topnav from "./topnav";
 import SideDrawer from "./SideDrawer";
-import PortfolioSection from "../pages/Dashboard/components/portfolioSection";
 
 export default function DashboardLayout({title, children}){
     const {isOpen, onClose, onOpen} = useDisclosure() //this is a hook that provides 3 properties as written
     return(
-        <Box>
+        <Box >
             <Flex>
                 <Box
                     display={{
@@ -20,7 +19,16 @@ export default function DashboardLayout({title, children}){
                 <SideDrawer isOpen={isOpen} onClose={onClose}/>
                 <Box flexGrow={'1'}>
                     <Topnav title={title} onOpen={onOpen}/>
-                    <Container overflowX={'hidden'} overflowY={'auto'} h={'calc(100vh - 64px)'} mt={'6'} maxW={'70rem'} px={'4'}>
+                    <Container 
+                    overflowX={'hidden'} 
+                    overflowY={'auto'} 
+                    h={'calc(100vh - 134px)'} 
+                    mt={'6'} maxW={'70rem'} 
+                    px={{
+                        base: '0',
+                        sm: '6',
+                        md: '9'
+                    }}>
                         {children}
                     </Container>
                 </Box>
