@@ -22,6 +22,8 @@ export default function TransactionPage(){
             count: 22
         }
     ]
+
+// From base to 1400px use card and after that use table to show data
     return(
         <DashboardLayout title={'Transactions'} >
             <Flex justify={'end'} mb={3}>
@@ -29,7 +31,7 @@ export default function TransactionPage(){
                     Export CSV
                 </Button>
             </Flex>
-            <Card borderRadius={4}>
+            <Card overflowX={'scroll'} borderRadius={4}>
                 <Tabs>
                     <TabList pt={6} px={3} display={'flex'} w={'full'} justifyContent={'space-between'}>
                         <HStack>
