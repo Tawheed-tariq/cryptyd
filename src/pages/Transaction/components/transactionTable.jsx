@@ -2,11 +2,9 @@ import {
     Table,
     Thead,
     Tbody,
-    Tfoot,
     Tr,
     Th,
     Td,
-    TableCaption,
     TableContainer,
     Icon,
     Text,
@@ -89,7 +87,7 @@ export default function TransactionTable(){
         cancelled: "#DC2626",
       };
     return(
-        <TableContainer>
+        <TableContainer overflowX={'scroll'}>
             <Table variant='simple' colorScheme='gray'>
                 {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
                 <Thead>
