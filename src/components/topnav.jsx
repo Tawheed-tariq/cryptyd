@@ -3,9 +3,21 @@ import {FaRegUserCircle, FaBars} from 'react-icons/fa'
 export default function Topnav({title, onOpen}){
     return(
         <Box px={'4'} bg={'white'}>
-            <HStack maxW={'70rem'} mx={'auto'} height={'16'} justify={'space-between'} px={'9'}>
+            <HStack 
+                maxW={'70rem'} 
+                mx={'auto'} 
+                height={'16'} 
+                justify={'space-between'} 
+                px={{
+                    base: '3',
+                    md: '6',
+                    lg: '9'                }}>
                 <Icon as={FaBars} cursor={'pointer'} fontSize={'28px'} onClick={onOpen} display={{base:'block', md:"none"}}/>
-            <Heading fontSize={'28px'}>{title}</Heading>
+            <Heading 
+                fontSize={{
+                    base: '20px',
+                    md: '28px'
+                }}>{title}</Heading>
             <Menu>
                 <MenuButton >
                     <Icon fontSize={'28px'} as={FaRegUserCircle}/>
