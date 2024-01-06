@@ -17,7 +17,7 @@ export default function DashboardLayout({title, children}){
                     <Sidenav/>
                 </Box>
                 <SideDrawer isOpen={isOpen} onClose={onClose}/>
-                <Box flexGrow={'1'}>
+                <Box minW={'320px'} flexGrow={'1'}>
                     <Topnav title={title} onOpen={onOpen}/>
                     <Container 
                     overflowX={'hidden'} 
@@ -25,9 +25,9 @@ export default function DashboardLayout({title, children}){
                     h={'calc(100vh - 134px)'} 
                     mt={'6'} maxW={'70rem'} 
                     px={{
-                        base: '0',
-                        sm: '6',
-                        md: '9'
+                        base: '1',
+                        sm: '8',
+                        md: '12'
                     }}>
                         {children}
                     </Container>
