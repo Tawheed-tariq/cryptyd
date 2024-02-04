@@ -37,9 +37,9 @@ export default function PortfolioSection(){
                     </HStack>
                     <Text 
                         textStyle={{
-                            base:'h5',
-                            sm:'h4',
-                            md: 'h3'
+                            base:'h6',
+                            sm:'h5',
+                            md: 'h4'
                         }} 
                         fontWeight={'medium'}>₹ 112,312.24</Text>
                 </Stack>
@@ -62,9 +62,9 @@ export default function PortfolioSection(){
                         <HStack> 
                             <Text 
                                 textStyle={{
-                                    base:'h5',
-                                    sm:'h4',
-                                    md: 'h3'
+                                    base:'h6',
+                                    sm:'h5',
+                                    md: 'h4'
                                 }} 
                                 fontWeight={'medium'}>22.39401000</Text>
                             <Tag size={'sm'} color={'black.60'}>BTC</Tag>
@@ -73,10 +73,10 @@ export default function PortfolioSection(){
                         <HStack> 
                             <Text 
                                 textStyle={{
-                                    base:'h5',
-                                    sm:'h4',
-                                    md: 'h3'
-                                }}
+                                    base:'h6',
+                                    sm:'h5',
+                                    md: 'h4'
+                                }} 
                                 fontWeight={'medium'}>₹ 1,300.00</Text>
                             <Tag 
                                 size={'sm'}

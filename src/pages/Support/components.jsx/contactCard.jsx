@@ -5,29 +5,7 @@ export default function ContactCard(){
         <Text fontWeight={'medium'} fontSize={'md'}>
             You will receive response within 24 hours of time of submit.
         </Text>
-        <HStack 
-            gap={3}
-            flexDir={{
-                base: 'column',
-                md: 'row'
-            }}>
-            <FormControl>
-                <FormLabel>Fist Name</FormLabel>
-                <Input type='text' placeholder="Example: except" />
-            </FormControl>
-            <FormControl>
-                <FormLabel>Sur Name</FormLabel>
-                <Input type='text' placeholder="Example: me" />
-            </FormControl>
-        </HStack>
-        <FormControl>
-                <FormLabel>Email address</FormLabel>
-                <Input type='email' placeholder="name@mail.com" />
-        </FormControl>
-        <FormControl>
-                <FormLabel>Message</FormLabel>
-                <Textarea type='text' placeholder="Your message" />
-        </FormControl>
+        
         <Checkbox >
             <Text fontSize={'xs'}>
                 I agree with 

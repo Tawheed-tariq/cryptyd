@@ -58,10 +58,11 @@ export default function PriceSection(){
                 <Flex justify={'end'}>
                     <TabList borderRadius={'lg'} bg={'black.10'} gap={4} p={'3px'}>
                         {
-                            ['1H', '1D', '1W', '1M'].map((item) => (
+                            ['1H', '1D', '1W', '1M'].map((item, index) => (
                                 <Tab 
                                     fontSize={'sm'} 
                                     p={1}
+                                    key={index}
                                     _selected={{
                                         bg: "white"
                                     }}
