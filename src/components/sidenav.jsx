@@ -23,7 +23,7 @@ export default function Sidenav(){
     return(
         <Stack  bg={'white'} justify={'space-between'} boxShadow={{base:"none", md:"lg"}} w={{base:"full", md:"256px"}} height={{base:"100%", md:"100vh"}}>
             <Box >
-                <Heading textAlign={'center'} as={'h1'} pt={'3rem'} fontSize={'20px'}>@Crypto Crap</Heading>
+                <Heading textAlign={'center'} as={'h1'} pt={'3rem'} fontSize={'20px'}>@Cryptyd</Heading>
                 <Box mt={'5'} mx={'3'}>
                     {
                         navLinks.map((nav) => (
